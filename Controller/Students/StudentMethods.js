@@ -1,5 +1,4 @@
 const Student = require('../../schema/Student/studentSchema');
-
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
