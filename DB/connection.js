@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
-const DB ="mongodb+srv://rahul:rahulvedi@cluster0.xmehz.mongodb.net/tutionpad?retryWrites=true&w=majority";
-mongoose.connect(process.env.MONGODB_URI || DB, {
+mongoose.connect(process.env.MONGODB_URI, {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
