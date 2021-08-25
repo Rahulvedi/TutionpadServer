@@ -17,14 +17,18 @@ const addStudent = async(req,res) =>{
   const loginStudent=async(req,res)=>{
     // const data = req.body;
     const {email,password} = req.body;
-    const student = await Student.findOne({email});;
-    let match = await bcrypt.compare(password, student.password);
-    if(match){
-      res.send('ok')
+    const student = await Student.findOne({email});
+    if(student){
+      let match = await bcrypt.compare(password, student.password);
+      if(match){
+        res.send('ok')
+      }
+      else{
+        res.send('Invalid Password')
+      }
     }
     else{
-      res.send('Invalid Password')
-    }
-
+      res.send('Account not Found')
+    }  
   }
   module.exports = {addStudent,loginStudent}
