@@ -24,6 +24,9 @@ const student = new mongoose.Schema({
     },
     class:{
         type: String,
+    },
+    image:{
+        type:String,
     }
   })
 

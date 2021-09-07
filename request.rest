@@ -3,6 +3,6 @@ POST http://localhost:3001/students/login-student
 Content-Type: application/json
 
 {
-    "email":"XYZ@gmail.com",
-    "password":"vedii"
+    "email":"rahul.v7800@gmail.com",
+    "password":"vedi"
 }
