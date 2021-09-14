@@ -6,7 +6,7 @@ const verifyToken = (req, res, next) => {
       const bearer = bearerHeader.split(' ');
       const bearerToken = bearer[1];
       const decoded = jwt.verify(bearerToken, process.env.skey);
-      req.user = decoded;
+      req.student = decoded;
       next();
   }catch (error) {
     res.send('invalid tkn');
