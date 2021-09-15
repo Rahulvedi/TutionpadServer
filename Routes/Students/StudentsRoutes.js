@@ -20,7 +20,7 @@ storage:fileStorageEngine
 router.get("/",(req,res)=>{
     res.send("hii from backend");
 })
-router.get('/getuser',mid.verifyToken,Methods.getStudent);
+router.get('/getstudent',mid.verifyToken,Methods.getStudent);
 router.post('/register-student',Methods.registerStudent);
 router.post('/login-student',Methods.loginStudent);
 router.post('/changepassword',mid.verifyToken,Methods.changePassword)

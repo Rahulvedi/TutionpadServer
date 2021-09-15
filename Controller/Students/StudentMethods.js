@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 
 const getStudent=async(req,res)=>{
 try{
-  let tkn = req.student;
+  let tkn = req.user;
     let id = tkn.id;
     const student = await Student.findById({_id:id});
     res.send(student)
@@ -54,7 +54,7 @@ const loginStudent = async (req, res) => {
 };
 const changePassword=async(req,res)=>{
   try{
-    let tkn = req.student;
+    let tkn = req.user;
     let id = tkn.id;
     const data = await Student.findById({_id:id}) ;
     const dataPass = data.password;
@@ -77,7 +77,7 @@ const changePassword=async(req,res)=>{
 const updateStudent = async (req, res) => {
   console.log(req.file.path);
   try{
-    let tkn = req.student;
+    let tkn = req.user;
     let id = tkn.id;
     const firstName=req.body.firstName;
     const lastName=req.body.lastName;
