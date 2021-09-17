@@ -21,8 +21,8 @@ router.get("/",(req,res)=>{
     res.send("hii from backend");
 })
 router.get('/getstudent',mid.verifyToken,Methods.getStudent);
-router.post('/register-student',Methods.registerStudent);
-router.post('/login-student',Methods.loginStudent);
+router.post('/register',Methods.registerStudent);
+router.post('/login',Methods.loginStudent);
 router.post('/changepassword',mid.verifyToken,Methods.changePassword)
-router.post('/updatestudent',mid.verifyToken,uploads.single('img'),Methods.updateStudent)
+router.post('/update',mid.verifyToken,uploads.single('img'),Methods.updateStudent)
 module.exports = router;

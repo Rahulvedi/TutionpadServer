@@ -17,8 +17,8 @@ storage:fileStorageEngine
 
 
 
-router.post('/registerteacher',Methods.registerTeacher);
-router.post('/loginteacher',Methods.loginTeacher);
+router.post('/register',Methods.registerTeacher);
+router.post('/login',Methods.loginTeacher);
 router.get('/getteacher',mid.verifyToken,Methods.getTeacher)
 router.post('/changepassword',mid.verifyToken,Methods.changePassword)
 router.post('/update',mid.verifyToken,uploads.single('img'),Methods.updateTeacher)
